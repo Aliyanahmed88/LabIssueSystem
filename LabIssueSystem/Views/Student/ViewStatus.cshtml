@@ -1,0 +1,159 @@
+@model IEnumerable<LabIssueSystem.Models.Ticket>
+@{
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+    ViewData["Title"] = "View Status";
+    var statusFilter = ViewBag.StatusFilter as string ?? "";
+    var searchString = ViewBag.SearchString as string ?? "";
+}
+
+<div class="view-status">
+    <div class="card">
+        <div class="card-header">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h5 class="mb-0"><i class="fas fa-list-alt me-2"></i>My Tickets</h5>
+                </div>
+                <div class="col-auto">
+                    <a asp-action="ReportIssue" class="btn btn-primary">
+                        <i class="fas fa-plus me-2"></i>New Issue
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    @TempData["SuccessMessage"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+
+            <form asp-action="ViewStatus" method="get" class="mb-4">
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-search"></i></span>
+                            <input type="text" name="searchString" class="form-control" 
+                                   placeholder="Search by Ticket ID or IP..." 
+                                   value="@searchString" />
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <select name="statusFilter" class="form-select">
+                            <option value="All">All Status</option>
+                            @if (statusFilter == "Open")
+                            {
+                                <option value="Open" selected>Open</option>
+                            }
+                            else
+                            {
+                                <option value="Open">Open</option>
+                            }
+                            @if (statusFilter == "InProgress")
+                            {
+                                <option value="InProgress" selected>In Progress</option>
+                            }
+                            else
+                            {
+                                <option value="InProgress">In Progress</option>
+                            }
+                            @if (statusFilter == "Resolved")
+                            {
+                                <option value="Resolved" selected>Resolved</option>
+                            }
+                            else
+                            {
+                                <option value="Resolved">Resolved</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <button type="submit" class="btn btn-outline-primary w-100">
+                            <i class="fas fa-filter me-1"></i>Filter
+                        </button>
+                    </div>
+                    <div class="col-md-3 text-end">
+                        <a asp-action="ViewStatus" class="btn btn-outline-secondary">
+                            <i class="fas fa-redo me-1"></i>Reset
+                        </a>
+                    </div>
+                </div>
+            </form>
+
+            @if (Model.Any())
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Ticket ID</th>
+                                <th>IP Address</th>
+                                <th>Issue Title</th>
+                                <th>Lab</th>
+                                <th>Priority</th>
+                                <th>Status</th>
+                                <th>Reported Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var ticket in Model)
+                            {
+                                <tr>
+                                    <td><strong>#@ticket.TicketId</strong></td>
+                                    <td><code>@ticket.IPAddress</code></td>
+                                    <td>@ticket.IssueTitle</td>
+                                    <td>@ticket.LabName</td>
+                                    <td>
+                                        <span class="badge priority-@ticket.Priority.ToLower()">
+                                            @ticket.Priority
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="badge status-@ticket.Status.ToLower().Replace(" ", "-")">
+                                            @ticket.Status
+                                        </span>
+                                    </td>
+                                    <td>@ticket.ReportedDate.ToString("MMM dd, yyyy HH:mm")</td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm">
+                                            <a asp-action="TicketDetails" asp-route-id="@ticket.TicketId" 
+                                               class="btn btn-outline-primary" title="View Details">
+                                                <i class="fas fa-eye"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="mt-3">
+                    <small class="text-muted">Showing @Model.Count() ticket(s)</small>
+                </div>
+            }
+            else
+            {
+                <div class="text-center py-5">
+                    <i class="fas fa-ticket-alt fa-4x text-muted mb-4"></i>
+                    <h5 class="text-muted">No tickets found</h5>
+                    <p class="text-muted">
+                        @if (!string.IsNullOrEmpty(searchString) || !string.IsNullOrEmpty(statusFilter))
+                        {
+                            <span>No tickets match your search criteria.</span>
+                        }
+                        else
+                        {
+                            <span>You haven't reported any issues yet.</span>
+                        }
+                    </p>
+                    <a asp-action="ReportIssue" class="btn btn-primary">
+                        <i class="fas fa-plus me-2"></i>Report Your First Issue
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

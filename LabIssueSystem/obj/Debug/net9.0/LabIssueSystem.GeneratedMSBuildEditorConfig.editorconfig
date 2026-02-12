@@ -1,0 +1,109 @@
+is_global = true
+build_property.TargetFramework = net9.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = LabIssueSystem
+build_property.RootNamespace = LabIssueSystem
+build_property.ProjectDir = C:\Users\aliya\Contacts\Desktop\LabIssueSystem\LabIssueSystem\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 9.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\aliya\Contacts\Desktop\LabIssueSystem\LabIssueSystem
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 9.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/aliya/Contacts/Desktop/LabIssueSystem/LabIssueSystem/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aliya/Contacts/Desktop/LabIssueSystem/LabIssueSystem/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aliya/Contacts/Desktop/LabIssueSystem/LabIssueSystem/Views/Faculty/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdWx0eVxEYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aliya/Contacts/Desktop/LabIssueSystem/LabIssueSystem/Views/Faculty/MonitorIssues.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdWx0eVxNb25pdG9ySXNzdWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aliya/Contacts/Desktop/LabIssueSystem/LabIssueSystem/Views/Faculty/Reports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdWx0eVxSZXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aliya/Contacts/Desktop/LabIssueSystem/LabIssueSystem/Views/Faculty/TicketDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmFjdWx0eVxUaWNrZXREZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aliya/Contacts/Desktop/LabIssueSystem/LabIssueSystem/Views/NetworkTeam/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV0d29ya1RlYW1cRGFzaGJvYXJkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aliya/Contacts/Desktop/LabIssueSystem/LabIssueSystem/Views/NetworkTeam/ManageIssues.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV0d29ya1RlYW1cTWFuYWdlSXNzdWVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aliya/Contacts/Desktop/LabIssueSystem/LabIssueSystem/Views/NetworkTeam/TicketDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV0d29ya1RlYW1cVGlja2V0RGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aliya/Contacts/Desktop/LabIssueSystem/LabIssueSystem/Views/NetworkTeam/UpdateStatus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmV0d29ya1RlYW1cVXBkYXRlU3RhdHVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aliya/Contacts/Desktop/LabIssueSystem/LabIssueSystem/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aliya/Contacts/Desktop/LabIssueSystem/LabIssueSystem/Views/Shared/_FacultyLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9GYWN1bHR5TGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aliya/Contacts/Desktop/LabIssueSystem/LabIssueSystem/Views/Shared/_NetworkTeamLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9OZXR3b3JrVGVhbUxheW91dC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aliya/Contacts/Desktop/LabIssueSystem/LabIssueSystem/Views/Shared/_StudentLayout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9TdHVkZW50TGF5b3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aliya/Contacts/Desktop/LabIssueSystem/LabIssueSystem/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aliya/Contacts/Desktop/LabIssueSystem/LabIssueSystem/Views/Student/Dashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxEYXNoYm9hcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aliya/Contacts/Desktop/LabIssueSystem/LabIssueSystem/Views/Student/ReportIssue.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxSZXBvcnRJc3N1ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aliya/Contacts/Desktop/LabIssueSystem/LabIssueSystem/Views/Student/TicketDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxUaWNrZXREZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aliya/Contacts/Desktop/LabIssueSystem/LabIssueSystem/Views/Student/ViewStatus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxWaWV3U3RhdHVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aliya/Contacts/Desktop/LabIssueSystem/LabIssueSystem/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aliya/Contacts/Desktop/LabIssueSystem/LabIssueSystem/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/aliya/Contacts/Desktop/LabIssueSystem/LabIssueSystem/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-n2gsm8mo8u

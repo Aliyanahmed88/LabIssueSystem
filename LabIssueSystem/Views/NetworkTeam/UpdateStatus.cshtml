@@ -1,0 +1,156 @@
+@model LabIssueSystem.Models.ViewModels.UpdateStatusViewModel
+@{
+    Layout = "~/Views/Shared/_NetworkTeamLayout.cshtml";
+    ViewData["Title"] = "Update Status";
+}
+
+<div class="update-status">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <h5 class="mb-0"><i class="fas fa-edit me-2"></i>Update Ticket #@Model.TicketId</h5>
+                        </div>
+                        <div class="col-auto">
+                            <span class="badge status-@Model.CurrentStatus.ToLower().Replace(" ", "-") fs-6">
+                                @Model.CurrentStatus
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    @if (TempData["SuccessMessage"] != null)
+                    {
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            @TempData["SuccessMessage"]
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    }
+
+                    @if (ViewData.ModelState.ErrorCount > 0)
+                    {
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                            {
+                                <p class="mb-0">@error.ErrorMessage</p>
+                            }
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    }
+
+                    <form asp-action="UpdateStatus" method="post">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" asp-for="TicketId" />
+                        <input type="hidden" asp-for="CurrentStatus" />
+                        <input type="hidden" asp-for="IssueTitle" />
+                        <input type="hidden" asp-for="IssueDescription" />
+                        <input type="hidden" asp-for="IPAddress" />
+
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <label class="text-muted small">IP Address</label>
+                                <p class="mb-1"><code class="fs-6">@Model.IPAddress</code></p>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="text-muted small">Issue Title</label>
+                                <p class="mb-1">@Model.IssueTitle</p>
+                            </div>
+                            <div class="col-12">
+                                <label class="text-muted small">Issue Description</label>
+                                <div class="p-3 bg-light rounded">
+                                    @Model.IssueDescription
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="NewStatus" class="form-label">New Status <span class="text-danger">*</span></label>
+                                <select asp-for="NewStatus" class="form-select" id="statusSelect">
+                                    @if (Model.CurrentStatus == "Open")
+                                    {
+                                        <option value="Open" selected>Open</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="Open">Open</option>
+                                    }
+                                    @if (Model.CurrentStatus == "InProgress")
+                                    {
+                                        <option value="InProgress" selected>In Progress</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="InProgress">In Progress</option>
+                                    }
+                                    @if (Model.CurrentStatus == "Resolved")
+                                    {
+                                        <option value="Resolved" selected>Resolved</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="Resolved">Resolved</option>
+                                    }
+                                </select>
+                                <span asp-validation-for="NewStatus" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="text-muted small">Current Status</label>
+                                <p class="mb-1">
+                                    <span class="badge status-@Model.CurrentStatus.ToLower().Replace(" ", "-")">
+                                        @Model.CurrentStatus
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="col-12">
+                                <label asp-for="ResolutionNotes" class="form-label">
+                                    Resolution Notes 
+                                    <span class="text-danger">*</span>
+                                    <small class="text-muted">(Required when marking as Resolved)</small>
+                                </label>
+                                <textarea asp-for="ResolutionNotes" class="form-control" rows="4" 
+                                          placeholder="Describe what was done to resolve this issue..."></textarea>
+                                <span asp-validation-for="ResolutionNotes" class="text-danger"></span>
+                            </div>
+                            <div class="col-12">
+                                <div class="alert alert-info">
+                                    <h6><i class="fas fa-info-circle me-2"></i>Status Workflow:</h6>
+                                    <ul class="mb-0">
+                                        <li><strong>Open</strong> - Issue just reported</li>
+                                        <li><strong>In Progress</strong> - Currently working on the issue</li>
+                                        <li><strong>Resolved</strong> - Issue has been fixed (requires resolution notes)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="d-flex gap-3">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-save me-2"></i>Update Status
+                                    </button>
+                                    <a asp-action="ManageIssues" class="btn btn-outline-secondary btn-lg">
+                                        <i class="fas fa-times me-2"></i>Cancel
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        $(document).ready(function() {
+            $('#statusSelect').change(function() {
+                var status = $(this).val();
+                if (status === 'Resolved') {
+                    $('#ResolutionNotes').prop('required', true);
+                } else {
+                    $('#ResolutionNotes').prop('required', false);
+                }
+            });
+        });
+    </script>
+}

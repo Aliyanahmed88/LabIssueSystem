@@ -1,0 +1,162 @@
+@model LabIssueSystem.Models.ViewModels.DashboardViewModel
+@{
+    Layout = "~/Views/Shared/_NetworkTeamLayout.cshtml";
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="dashboard">
+    <div class="row g-4 mb-4">
+        <div class="col-md-3 col-sm-6">
+            <div class="stat-card">
+                <div class="stat-icon total">
+                    <i class="fas fa-ticket-alt"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-value">@Model.TotalTickets</h3>
+                    <p class="stat-label">Total Tickets</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="stat-card">
+                <div class="stat-icon open">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-value">@Model.OpenTickets</h3>
+                    <p class="stat-label">Open Issues</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="stat-card">
+                <div class="stat-icon in-progress">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-value">@Model.InProgressTickets</h3>
+                    <p class="stat-label">In Progress</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="stat-card">
+                <div class="stat-icon resolved">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-value">@Model.ResolvedTickets</h3>
+                    <p class="stat-label">Resolved</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0"><i class="fas fa-history me-2"></i>Recent Activities</h5>
+                    <a asp-action="ManageIssues" class="btn btn-sm btn-outline-primary">View All</a>
+                </div>
+                <div class="card-body">
+                    @if (Model.RecentTickets.Any())
+                    {
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Ticket ID</th>
+                                        <th>IP Address</th>
+                                        <th>Issue</th>
+                                        <th>Student</th>
+                                        <th>Status</th>
+                                        <th>Date</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var ticket in Model.RecentTickets)
+                                    {
+                                        <tr>
+                                            <td><strong>#@ticket.TicketId</strong></td>
+                                            <td><code>@ticket.IPAddress</code></td>
+                                            <td>@ticket.IssueTitle</td>
+                                            <td>@ticket.ReportedByName</td>
+                                            <td>
+                                                <span class="badge status-@ticket.Status.ToLower().Replace(" ", "-")">
+                                                    @ticket.Status
+                                                </span>
+                                            </td>
+                                            <td>@ticket.ReportedDate.ToString("MMM dd, HH:mm")</td>
+                                            <td>
+                                                <a asp-action="UpdateStatus" asp-route-id="@ticket.TicketId" 
+                                                   class="btn btn-sm btn-outline-primary">
+                                                    <i class="fas fa-edit"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="text-center py-4">
+                            <i class="fas fa-check-circle fa-3x text-success mb-3"></i>
+                            <p class="text-muted">No tickets in the system</p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5><i class="fas fa-chart-pie me-2"></i>Priority Overview</h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>High Priority</span>
+                            <span class="badge bg-danger">@Model.HighPriorityTickets</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-danger" style="width: @((Model.TotalTickets > 0 ? (double)Model.HighPriorityTickets/Model.TotalTickets*100 : 0))%"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>Medium Priority</span>
+                            <span class="badge bg-warning">@Model.MediumPriorityTickets</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-warning" style="width: @((Model.TotalTickets > 0 ? (double)Model.MediumPriorityTickets/Model.TotalTickets*100 : 0))%"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>Low Priority</span>
+                            <span class="badge bg-info">@Model.LowPriorityTickets</span>
+                        </div>
+                        <div class="progress" style="height: 8px;">
+                            <div class="progress-bar bg-info" style="width: @((Model.TotalTickets > 0 ? (double)Model.LowPriorityTickets/Model.TotalTickets*100 : 0))%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-4">
+                <div class="card-header">
+                    <h5><i class="fas fa-stopwatch me-2"></i>Performance</h5>
+                </div>
+                <div class="card-body">
+                    <div class="text-center">
+                        <h2 class="display-4 fw-bold">@Model.AverageResolutionTime.ToString("F1")</h2>
+                        <p class="text-muted">Avg. Hours to Resolve</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

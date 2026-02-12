@@ -1,0 +1,260 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|c:\\users\\aliya\\contacts\\desktop\\labissuesystem\\labissuesystem\\views\\networkteam\\manageissues.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|solutionrelative:labissuesystem\\views\\networkteam\\manageissues.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|c:\\users\\aliya\\contacts\\desktop\\labissuesystem\\labissuesystem\\views\\faculty\\monitorissues.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|solutionrelative:labissuesystem\\views\\faculty\\monitorissues.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|c:\\users\\aliya\\contacts\\desktop\\labissuesystem\\labissuesystem\\views\\student\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|solutionrelative:labissuesystem\\views\\student\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|c:\\users\\aliya\\contacts\\desktop\\labissuesystem\\labissuesystem\\sql-schema.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|solutionrelative:labissuesystem\\sql-schema.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|c:\\users\\aliya\\contacts\\desktop\\labissuesystem\\labissuesystem\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|solutionrelative:labissuesystem\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|c:\\users\\aliya\\contacts\\desktop\\labissuesystem\\labissuesystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|solutionrelative:labissuesystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|c:\\users\\aliya\\contacts\\desktop\\labissuesystem\\labissuesystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|solutionrelative:labissuesystem\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|c:\\users\\aliya\\contacts\\desktop\\labissuesystem\\labissuesystem\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|solutionrelative:labissuesystem\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|c:\\users\\aliya\\contacts\\desktop\\labissuesystem\\labissuesystem\\models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|solutionrelative:labissuesystem\\models\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|c:\\users\\aliya\\contacts\\desktop\\labissuesystem\\labissuesystem\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|solutionrelative:labissuesystem\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|c:\\users\\aliya\\contacts\\desktop\\labissuesystem\\labissuesystem\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|solutionrelative:labissuesystem\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|c:\\users\\aliya\\contacts\\desktop\\labissuesystem\\labissuesystem\\controllers\\facultycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|solutionrelative:labissuesystem\\controllers\\facultycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|c:\\users\\aliya\\contacts\\desktop\\labissuesystem\\labissuesystem\\controllers\\networkteamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|solutionrelative:labissuesystem\\controllers\\networkteamcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|c:\\users\\aliya\\contacts\\desktop\\labissuesystem\\labissuesystem\\views\\student\\viewstatus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|solutionrelative:labissuesystem\\views\\student\\viewstatus.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|c:\\users\\aliya\\contacts\\desktop\\labissuesystem\\labissuesystem\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5D0F1942-1C46-48A8-812F-608767DFAE93}|LabIssueSystem\\LabIssueSystem.csproj|solutionrelative:labissuesystem\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ManageIssues.cshtml",
+              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\Views\\NetworkTeam\\ManageIssues.cshtml",
+              "RelativeDocumentMoniker": "LabIssueSystem\\Views\\NetworkTeam\\ManageIssues.cshtml",
+              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\Views\\NetworkTeam\\ManageIssues.cshtml",
+              "RelativeToolTip": "LabIssueSystem\\Views\\NetworkTeam\\ManageIssues.cshtml",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAAAJ0AAABoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-11T16:22:38.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\Models\\User.cs",
+              "RelativeDocumentMoniker": "LabIssueSystem\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\Models\\User.cs",
+              "RelativeToolTip": "LabIssueSystem\\Models\\User.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAiwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T16:35:16.346Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "LabIssueSystem\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "LabIssueSystem\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAADIAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T15:38:22.377Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MonitorIssues.cshtml",
+              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\Views\\Faculty\\MonitorIssues.cshtml",
+              "RelativeDocumentMoniker": "LabIssueSystem\\Views\\Faculty\\MonitorIssues.cshtml",
+              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\Views\\Faculty\\MonitorIssues.cshtml",
+              "RelativeToolTip": "LabIssueSystem\\Views\\Faculty\\MonitorIssues.cshtml",
+              "ViewState": "AgIAAIYAAAAAAAAAAAAAAKIAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-11T16:25:47.212Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "LabIssueSystem\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "LabIssueSystem\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAFgAAAB1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-11T15:40:40.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SQL-Schema.sql",
+              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\SQL-Schema.sql",
+              "RelativeDocumentMoniker": "LabIssueSystem\\SQL-Schema.sql",
+              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\SQL-Schema.sql",
+              "RelativeToolTip": "LabIssueSystem\\SQL-Schema.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-02-11T16:16:43.479Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "LabIssueSystem\\Controllers\\StudentController.cs",
+              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "LabIssueSystem\\Controllers\\StudentController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAUwB0AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T15:40:24.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\appsettings.json",
+              "RelativeDocumentMoniker": "LabIssueSystem\\appsettings.json",
+              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\appsettings.json",
+              "RelativeToolTip": "LabIssueSystem\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-11T15:20:16.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "NetworkTeamController.cs",
+              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\Controllers\\NetworkTeamController.cs",
+              "RelativeDocumentMoniker": "LabIssueSystem\\Controllers\\NetworkTeamController.cs",
+              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\Controllers\\NetworkTeamController.cs",
+              "RelativeToolTip": "LabIssueSystem\\Controllers\\NetworkTeamController.cs",
+              "ViewState": "AgIAAMEAAAAAAAAAAIAxwNUAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T15:40:23.091Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\Program.cs",
+              "RelativeDocumentMoniker": "LabIssueSystem\\Program.cs",
+              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\Program.cs",
+              "RelativeToolTip": "LabIssueSystem\\Program.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-12T07:15:18.569Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\Views\\Student\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "LabIssueSystem\\Views\\Student\\Dashboard.cshtml",
+              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\Views\\Student\\Dashboard.cshtml",
+              "RelativeToolTip": "LabIssueSystem\\Views\\Student\\Dashboard.cshtml",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAIwIkAAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-12T07:20:20.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Ticket.cs",
+              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\Models\\Ticket.cs",
+              "RelativeDocumentMoniker": "LabIssueSystem\\Models\\Ticket.cs",
+              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\Models\\Ticket.cs",
+              "RelativeToolTip": "LabIssueSystem\\Models\\Ticket.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAowDgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T16:14:39.503Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ViewStatus.cshtml",
+              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\Views\\Student\\ViewStatus.cshtml",
+              "RelativeDocumentMoniker": "LabIssueSystem\\Views\\Student\\ViewStatus.cshtml",
+              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\Views\\Student\\ViewStatus.cshtml",
+              "RelativeToolTip": "LabIssueSystem\\Views\\Student\\ViewStatus.cshtml",
+              "ViewState": "AgIAAGYAAAAAAAAAAAAqwGwAAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-11T16:20:45.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FacultyController.cs",
+              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\Controllers\\FacultyController.cs",
+              "RelativeDocumentMoniker": "LabIssueSystem\\Controllers\\FacultyController.cs",
+              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\Controllers\\FacultyController.cs",
+              "RelativeToolTip": "LabIssueSystem\\Controllers\\FacultyController.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAAC8AAABvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-11T15:40:18.777Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "LabIssueSystem\\Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\aliya\\Contacts\\Desktop\\LabIssueSystem\\LabIssueSystem\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "LabIssueSystem\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-11T15:40:59.191Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+@model IEnumerable<LabIssueSystem.Models.Ticket>
+@{
+    Layout = "~/Views/Shared/_NetworkTeamLayout.cshtml";
+    ViewData["Title"] = "Manage Issues";
+    var statusFilter = ViewBag.StatusFilter as string ?? "";
+    var priorityFilter = ViewBag.PriorityFilter as string ?? "";
+    var searchString = ViewBag.SearchString as string ?? "";
+}
+
+<div class="manage-issues">
+    <div class="card">
+        <div class="card-header">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h5 class="mb-0"><i class="fas fa-tools me-2"></i>Manage All Issues</h5>
+                </div>
+                <div class="col-auto">
+                    <span class="badge bg-secondary">@Model.Count() Total</span>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    @TempData["SuccessMessage"]
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            }
+
+            <form asp-action="ManageIssues" method="get" class="mb-4">
+                <div class="row g-3">
+                    <div class="col-md-3">
+                        <div class="input-group">
+                            <span class="input-group-text"><i class="fas fa-search"></i></span>
+                            <input type="text" name="searchString" class="form-control" 
+                                   placeholder="Search tickets..." 
+                                   value="@searchString" />
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <select name="statusFilter" class="form-select">
+                            <option value="All">All Status</option>
+                            @if (statusFilter == "Open")
+                            {
+                                <option value="Open" selected>Open</option>
+                            }
+                            else
+                            {
+                                <option value="Open">Open</option>
+                            }
+                            @if (statusFilter == "InProgress")
+                            {
+                                <option value="InProgress" selected>In Progress</option>
+                            }
+                            else
+                            {
+                                <option value="InProgress">In Progress</option>
+                            }
+                            @if (statusFilter == "Resolved")
+                            {
+                                <option value="Resolved" selected>Resolved</option>
+                            }
+                            else
+                            {
+                                <option value="Resolved">Resolved</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <select name="priorityFilter" class="form-select">
+                            <option value="All">All Priority</option>
+                            @if (priorityFilter == "High")
+                            {
+                                <option value="High" selected>High</option>
+                            }
+                            else
+                            {
+                                <option value="High">High</option>
+                            }
+                            @if (priorityFilter == "Medium")
+                            {
+                                <option value="Medium" selected>Medium</option>
+                            }
+                            else
+                            {
+                                <option value="Medium">Medium</option>
+                            }
+                            @if (priorityFilter == "Low")
+                            {
+                                <option value="Low" selected>Low</option>
+                            }
+                            else
+                            {
+                                <option value="Low">Low</option>
+                            }
+                        </select>
+                    </div>
+                    <div class="col-md-2">
+                        <button type="submit" class="btn btn-outline-primary w-100">
+                            <i class="fas fa-filter me-1"></i>Filter
+                        </button>
+                    </div>
+                    <div class="col-md-3 text-end">
+                        <a asp-action="ManageIssues" class="btn btn-outline-secondary">
+                            <i class="fas fa-redo me-1"></i>Reset
+                        </a>
+                    </div>
+                </div>
+            </form>
+
+            @if (Model.Any())
+            {
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>IP Address</th>
+                                <th>Student</th>
+                                <th>Issue Title</th>
+                                <th>Lab</th>
+                                <th>Priority</th>
+                                <th>Status</th>
+                                <th>Reported</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var ticket in Model)
+                            {
+                                <tr class="@(ticket.Status == "Open" ? "table-warning" : (ticket.Status == "InProgress" ? "table-info" : ""))">
+                                    <td><strong>#@ticket.TicketId</strong></td>
+                                    <td><code>@ticket.IPAddress</code></td>
+                                    <td>@ticket.Reporter?.FullName</td>
+                                    <td>@ticket.IssueTitle</td>
+                                    <td>@ticket.LabName</td>
+                                    <td>
+                                        <span class="badge priority-@ticket.Priority.ToLower()">
+                                            @ticket.Priority
+                                        </span>
+                                    </td>
+                                    <td>
+                                        <span class="badge status-@ticket.Status.ToLower().Replace(" ", "-")">
+                                            @ticket.Status
+                                        </span>
+                                    </td>
+                                    <td>@ticket.ReportedDate.ToString("MMM dd HH:mm")</td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm">
+                                            <a asp-action="UpdateStatus" asp-route-id="@ticket.TicketId" 
+                                               class="btn btn-primary" title="Update Status">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            @if (ticket.AssignedTo == null)
+                                            {
+                                                <a asp-action="AssignToMe" asp-route-id="@ticket.TicketId" 
+                                                   class="btn btn-outline-success" title="Assign to Me">
+                                                    <i class="fas fa-user-plus"></i>
+                                                </a>
+                                            }
+                                        </div>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            else
+            {
+                <div class="text-center py-5">
+                    <i class="fas fa-check-circle fa-4x text-success mb-4"></i>
+                    <h5 class="text-muted">All caught up!</h5>
+                    <p class="text-muted">No tickets match your filter criteria.</p>
+                </div>
+            }
+        </div>
+    </div>
+</div>

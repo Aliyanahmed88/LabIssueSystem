@@ -1,0 +1,99 @@
+@model LabIssueSystem.Models.ViewModels.TicketViewModel
+@{
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+    ViewData["Title"] = "Ticket Details";
+}
+
+<div class="ticket-details">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row align-items-center">
+                        <div class="col">
+                            <h5 class="mb-0">
+                                <i class="fas fa-ticket-alt me-2"></i>Ticket #@Model.TicketId
+                            </h5>
+                        </div>
+                        <div class="col-auto">
+                            <span class="badge status-@Model.Status.ToLower().Replace(" ", "-") fs-6">
+                                @Model.Status
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <label class="text-muted small">IP Address</label>
+                            <p class="mb-1"><code class="fs-6">@Model.IPAddress</code></p>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="text-muted small">Priority</label>
+                            <p class="mb-1">
+                                <span class="badge priority-@Model.Priority.ToLower()">
+                                    @Model.Priority
+                                </span>
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="text-muted small">Lab Name</label>
+                            <p class="mb-1">@Model.LabName</p>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="text-muted small">Computer Name</label>
+                            <p class="mb-1">@Model.ComputerName</p>
+                        </div>
+                        <div class="col-12">
+                            <label class="text-muted small">Issue Title</label>
+                            <h5 class="mb-1">@Model.IssueTitle</h5>
+                        </div>
+                        <div class="col-12">
+                            <label class="text-muted small">Issue Description</label>
+                            <div class="p-3 bg-light rounded">
+                                @Model.IssueDescription
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="text-muted small">Reported Date</label>
+                            <p class="mb-1">@Model.ReportedDate.ToString("MMMM dd, yyyy 'at' HH:mm")</p>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="text-muted small">Reported By</label>
+                            <p class="mb-1">@Model.ReportedByName</p>
+                        </div>
+                        @if (!string.IsNullOrEmpty(Model.AssignedToName))
+                        {
+                            <div class="col-md-6">
+                                <label class="text-muted small">Assigned To</label>
+                                <p class="mb-1">@Model.AssignedToName</p>
+                            </div>
+                        }
+                        @if (Model.ResolvedDate.HasValue)
+                        {
+                            <div class="col-md-6">
+                                <label class="text-muted small">Resolved Date</label>
+                                <p class="mb-1">@Model.ResolvedDate.Value.ToString("MMMM dd, yyyy 'at' HH:mm")</p>
+                            </div>
+                        }
+                        @if (!string.IsNullOrEmpty(Model.ResolutionNotes))
+                        {
+                            <div class="col-12">
+                                <label class="text-muted small">Resolution Notes</label>
+                                <div class="p-3 bg-success bg-opacity-10 rounded border border-success">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    @Model.ResolutionNotes
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <a asp-action="ViewStatus" class="btn btn-outline-secondary">
+                        <i class="fas fa-arrow-left me-2"></i>Back to Tickets
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

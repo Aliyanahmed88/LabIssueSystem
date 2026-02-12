@@ -1,0 +1,153 @@
+@model LabIssueSystem.Models.ViewModels.DashboardViewModel
+@{
+    Layout = "~/Views/Shared/_StudentLayout.cshtml";
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="dashboard">
+    <div class="row g-4 mb-4">
+        <div class="col-md-3 col-sm-6">
+            <div class="stat-card">
+                <div class="stat-icon total">
+                    <i class="fas fa-ticket-alt"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-value">@Model.TotalTickets</h3>
+                    <p class="stat-label">Total Tickets</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="stat-card">
+                <div class="stat-icon open">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-value">@Model.OpenTickets</h3>
+                    <p class="stat-label">Open Issues</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="stat-card">
+                <div class="stat-icon in-progress">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-value">@Model.InProgressTickets</h3>
+                    <p class="stat-label">In Progress</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="stat-card">
+                <div class="stat-icon resolved">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 class="stat-value">@Model.ResolvedTickets</h3>
+                    <p class="stat-label">Resolved</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-header">
+                    <h5><i class="fas fa-history me-2"></i>Recent Tickets</h5>
+                </div>
+                <div class="card-body">
+                    @if (Model.RecentTickets.Any())
+                    {
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Ticket ID</th>
+                                        <th>IP Address</th>
+                                        <th>Issue</th>
+                                        <th>Status</th>
+                                        <th>Date</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var ticket in Model.RecentTickets)
+                                    {
+                                        <tr>
+                                            <td><strong>#@ticket.TicketId</strong></td>
+                                            <td><code>@ticket.IPAddress</code></td>
+                                            <td>@ticket.IssueTitle</td>
+                                            <td>
+                                                <span class="badge status-@ticket.Status.ToLower().Replace(" ", "-")">
+                                                    @ticket.Status
+                                                </span>
+                                            </td>
+                                            <td>@ticket.ReportedDate.ToString("MMM dd, yyyy HH:mm")</td>
+                                            <td>
+                                                <a asp-action="TicketDetails" asp-route-id="@ticket.TicketId" 
+                                                   class="btn btn-sm btn-outline-primary">
+                                                    <i class="fas fa-eye"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="text-center py-4">
+                            <i class="fas fa-ticket-alt fa-3x text-muted mb-3"></i>
+                            <p class="text-muted">No tickets submitted yet</p>
+                            <a asp-action="ReportIssue" class="btn btn-primary">
+                                <i class="fas fa-plus me-2"></i>Report an Issue
+                            </a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-header">
+                    <h5><i class="fas fa-bolt me-2"></i>Quick Actions</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-grid gap-3">
+                        <a asp-action="ReportIssue" class="btn btn-primary">
+                            <i class="fas fa-plus-circle me-2"></i>Report New Issue
+                        </a>
+                        <a asp-action="ViewStatus" class="btn btn-outline-secondary">
+                            <i class="fas fa-list-alt me-2"></i>View All Tickets
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="card mt-4">
+                <div class="card-header">
+                    <h5><i class="fas fa-info-circle me-2"></i>System Info</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2">
+                            <i class="fas fa-user me-2"></i>
+                            Logged in as <strong>@User.FindFirst("FullName")?.Value</strong>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-role me-2"></i>
+                            Role: <span class="badge bg-primary">Student</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock me-2"></i>
+                            Current Time: @DateTime.Now.ToString("MMMM dd, yyyy HH:mm")
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
